@@ -54,12 +54,14 @@ if st.session_state.information_button_clicked == True:
     c.write("**08:45 - 09:00:** Registration")
     c.write("**09:00 - 10:30:** Student Presentations: Keyu MAO, Alex WASCHTSHC, Alice RAVEZ, Fakhri-Eddin LAHFAIDH, Anastasiia PIDVOROTNIA")
     c.write("**10:30 - 11:00:** Small Coffee Break")
-    c.write("**11:00 - 11:45:** Student Presentations: Matthieu JORADON, Sandra LITWIN, Jean-Baptiste COFFIN")
+    c.write("**11:00 - 11:45:** Student Presentations: Matthieu JORANDON, Sandra LITWIN, Jean-Baptiste COFFIN")
     c.write("**11:45 - 12:15:** Invited Speaker: Dr. Hervé RAPS")
     c.write("**12:15 - 12:25:** Awards - Closing Ceremony")
     c.write("**12:25 - 13:30:** Lunch Buffet")
 
     st.subheader('Location', divider="blue")
+
+    st.write('The event will take place at <a href="https://maps.app.goo.gl/sA1bDTkCePrknuZo8" target="_blank">Villa Arson</a> in Nice. The address is: 20 Av. Stephen Liegeard, 06100 Nice. You can find the location on the map below.', unsafe_allow_html=True)
 
     m = folium.Map(location=[43.721745150171614, 7.252915797843882], zoom_start=16)
     folium.Marker([43.721745150171614, 7.252915797843882], popup='See Villa Arson on <a href="https://maps.app.goo.gl/sA1bDTkCePrknuZo8" target="_blank">Google Maps</a>', tooltip='Villa Arson, 20 Av. Stephen Liegeard, 06100 Nice').add_to(m)
